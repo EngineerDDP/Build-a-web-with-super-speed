@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "数据库课程设计": {
+    "SchoolManagement": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

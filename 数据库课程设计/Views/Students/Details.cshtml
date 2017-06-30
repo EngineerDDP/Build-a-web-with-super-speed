@@ -1,0 +1,70 @@
+﻿@model SchoolManagement.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>学生详情信息</h2>
+
+<div>
+    <h4>信息:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.belongs.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.belongs.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.belongs.Belongs.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.belongs.Belongs.Name)
+        </dd>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>课程名</th>
+                    <th>学时</th>
+                    <th>学分</th>
+                    <th>成绩</th>
+                </tr>
+                @foreach (var item in Model.Choices)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Take.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Take.Hour)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Take.Credit)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Score)
+                        </td>
+                    </tr>
+
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">编辑</a> |
+    <a asp-action="Index">返回</a>
+</div>

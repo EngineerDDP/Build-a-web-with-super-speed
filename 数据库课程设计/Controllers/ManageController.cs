@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using 数据库课程设计.Models;
-using 数据库课程设计.Models.ManageViewModels;
-using 数据库课程设计.Services;
+using SchoolManagement.Models;
+using SchoolManagement.Models.ManageViewModels;
+using SchoolManagement.Services;
 
-namespace 数据库课程设计.Controllers
+namespace SchoolManagement.Controllers
 {
     [Authorize]
     public class ManageController : Controller

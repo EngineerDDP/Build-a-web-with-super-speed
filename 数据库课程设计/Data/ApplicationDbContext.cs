@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using 数据库课程设计.Models;
+using SchoolManagement.Models;
 
-namespace 数据库课程设计.Data
+namespace SchoolManagement.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

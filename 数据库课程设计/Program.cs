@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace 数据库课程设计
+namespace SchoolManagement
 {
     public class Program
     {

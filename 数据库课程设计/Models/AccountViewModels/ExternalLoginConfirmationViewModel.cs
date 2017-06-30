@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace 数据库课程设计.Models.AccountViewModels
+namespace SchoolManagement.Models.AccountViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {

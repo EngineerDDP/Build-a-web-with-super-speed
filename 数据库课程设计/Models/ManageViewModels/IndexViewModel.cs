@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace 数据库课程设计.Models.ManageViewModels
+namespace SchoolManagement.Models.ManageViewModels
 {
     public class IndexViewModel
     {

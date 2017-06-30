@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace 数据库课程设计.Controllers
+namespace SchoolManagement.Controllers
 {
     public class HomeController : Controller
     {

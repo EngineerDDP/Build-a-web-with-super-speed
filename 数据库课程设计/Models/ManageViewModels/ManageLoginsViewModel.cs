@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace 数据库课程设计.Models.ManageViewModels
+namespace SchoolManagement.Models.ManageViewModels
 {
     public class ManageLoginsViewModel
     {

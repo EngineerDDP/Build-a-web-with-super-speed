@@ -9,11 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using 数据库课程设计.Models;
-using 数据库课程设计.Models.AccountViewModels;
-using 数据库课程设计.Services;
+using SchoolManagement.Models;
+using SchoolManagement.Models.AccountViewModels;
+using SchoolManagement.Services;
 
-namespace 数据库课程设计.Controllers
+namespace SchoolManagement.Controllers
 {
     [Authorize]
     public class AccountController : Controller
@@ -113,6 +113,7 @@ namespace 数据库课程设计.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+              
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

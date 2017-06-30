@@ -1,0 +1,70 @@
+@model SchoolManagement.Models.Teacher
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Belongs.Belongs.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Belongs.Belongs.Name)
+        </dd>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>课程名</th>
+                    <th>学时</th>
+                    <th>学分</th>
+                </tr>
+                @foreach (var item in Model.Lessons)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Crs.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Crs.Hour)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Crs.Credit)
+                        </td>
+                    </tr>
+
+                }
+            </table>
+        </dd>
+        <dd>
+            <a asp-action="Choice" asp-route-id="@Model.Id">评分</a>
+        </dd>
+    </dl>
+</div>

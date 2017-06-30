@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace 数据库课程设计.Models.AccountViewModels
+namespace SchoolManagement.Models.AccountViewModels
 {
     public class SendCodeViewModel
     {
