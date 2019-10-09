@@ -42,6 +42,7 @@ namespace SchoolManagement.Controllers
             var tchr = _context.Teacher
                 .Include(q => q.Lessons)
                 .ThenInclude(q => q.Crs)
+                .ThenInclude(q => q.Choices)
                 .SingleOrDefault(q => q.Id == id.Value);
             if(tchr != null)
             {

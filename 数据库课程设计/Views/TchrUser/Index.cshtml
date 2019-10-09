@@ -1,12 +1,12 @@
-@model SchoolManagement.Models.Teacher
+﻿@model SchoolManagement.Models.Teacher
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>个人信息</h2>
 
 <div>
-    <h4>Student</h4>
+    <h4>教师</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -42,9 +42,10 @@
         <dd>
             <table class="table">
                 <tr>
-                    <th>�γ���</th>
-                    <th>ѧʱ</th>
-                    <th>ѧ��</th>
+                    <th>课程名</th>
+                    <th>学时</th>
+                    <th>学分</th>
+                    <th>选修人数</th>
                 </tr>
                 @foreach (var item in Model.Lessons)
                 {
@@ -58,13 +59,16 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Crs.Credit)
                         </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Crs.Choices.Count)
+                        </td>
                     </tr>
 
                 }
             </table>
         </dd>
         <dd>
-            <a asp-action="Choice" asp-route-id="@Model.Id">����</a>
+            <a asp-action="Judge" asp-route-id="@Model.Id">评分</a>
         </dd>
     </dl>
 </div>

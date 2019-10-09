@@ -12,6 +12,10 @@
     <UserSecretsId>aspnet-数据库课程设计-6f205545-3447-4f36-ad2a-d0b468922d0c</UserSecretsId>
     <RootNamespace>SchoolManagement</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\Page1.html" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />

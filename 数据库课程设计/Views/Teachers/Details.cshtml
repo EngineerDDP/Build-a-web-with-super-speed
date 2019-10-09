@@ -1,13 +1,13 @@
-@model SchoolManagement.Models.Teacher
+﻿@model SchoolManagement.Models.Teacher
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>详细信息</h2>
 
 <div>
-    <h4>Teacher</h4>
+    <h4>教师:</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -23,12 +23,6 @@
             @Html.DisplayFor(model => model.Sex)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.Salary)
         </dt>
         <dd>
@@ -37,6 +31,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id">编辑</a> |
+    <a asp-action="Index">返回</a>
 </div>
